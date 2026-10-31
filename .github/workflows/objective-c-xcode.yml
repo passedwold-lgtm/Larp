@@ -19,7 +19,7 @@ jobs:
         brew install ldid
 
     - name: Build Tweak
-      working-directory: "intex dylib"
+      working-directory: intex_dylib
       run: |
         make clean
         make package
@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: mod
-        path: "intex dylib/packages/*.deb"
+        path: intex_dylib/packages/*.deb
